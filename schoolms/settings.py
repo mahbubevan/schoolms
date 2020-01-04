@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'clasub',
     'family',
     'student',
+    'pages',
 ]
 
 MIDDLEWARE = [
