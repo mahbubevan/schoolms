@@ -1,0 +1,54 @@
+#branding h1{
+    color:whitesmoke;
+}
+
+#header {
+    background: #10284e;
+    color:whitesmoke;
+}
+
+
+.module h2, .module caption, .inline-group h2 {
+    background-color: #30caa0;
+    caption-side: top;
+}
+
+td, th {
+    font-size: 18px;
+    line-height: 16px;
+    border-bottom: 1px solid #10284e;
+    vertical-align:top;
+}
+
+a:link, a:visited {
+    color: #10284e;
+    text-decoration: none;
+}
+
+.dashboard #content {
+    width: 70%;
+}
+
+div.breadcrumbs {
+    background: #30caa0;
+    color:#10284e ;
+}
+
+.addlink {
+    color:#10284e !important;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #30caa0;
+    color:#10284e ;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default{
+    background: #30caa0;
+    color:#10284e ;
+}
+
+#database-title{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

@@ -7,7 +7,6 @@ from clasub . models import Clasub
 
 
 class Student(models.Model):
-    staff = models.ManyToManyField(Staff)
     clasub = models.ManyToManyField(Clasub)
     family = models.ForeignKey(Family, on_delete=models.DO_NOTHING)
     first_name = models.CharField(max_length=200)
