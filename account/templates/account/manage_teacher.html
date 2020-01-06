@@ -72,7 +72,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form action="#" method="POST">{% csrf_token %}
+              <form action="{% url 'account:create_teacher' %}" method="POST">{% csrf_token %}
                 <div class="form-group">
                     <label for="" class="col-form-label">First Name:</label>
                     <input
@@ -88,21 +88,38 @@
                       class="form-control"
                       value=""
                     />
+                    <label for="" class="col-form-label">Username:</label>
+                    <input
+                      type="text"
+                      name="username"
+                      class="form-control"
+                      value=""
+                    />
                     <label for="" class="col-form-label">Password:</label>
                     <input
+                        readonly
                       type="text"
                       name="password"
                       class="form-control"
-                      value=""
+                      value="{{teacher_id}}"
                     />
                     <label for="" class="col-form-label">Role:</label>
+                    <select name="role" id="" class="form-control">
+                        <option value="LR">Lecturer</option>
+                        <option value="AP">Assistant Professor</option>
+                        <option value="PF">Professor</option>
+                    </select>
+                    <label for="" class="col-form-label">Teacher Id:</label>
                     <input
+                      readonly
                       type="text"
-                      name="role"
+                      name="teacher_id"
                       class="form-control"
-                      value=""
+                      value="{{teacher_id}}"
                     />
                   </div>
+
+                  <input type="submit" value="Add" class="btn btn-sm btn-success">
               </form>
             </div>
           </div>
