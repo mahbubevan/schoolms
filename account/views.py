@@ -2,6 +2,10 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
+
+# Importing Models
+from staff . models import Staff
+
 # Create your views here.
 
 def registration(request):
@@ -57,3 +61,12 @@ def logout(request):
 @login_required(login_url='/account/login/')
 def dashboard(request):
     return render(request,'account/dashboard.html')
+
+@login_required(login_url='/account/login/')
+def view_teacher(request):
+    staffs = Staff.objects.all()
+    context = {
+        'staffs':staffs,
+    }
+
+    return render(request,'account/manage_teacher.html',context)

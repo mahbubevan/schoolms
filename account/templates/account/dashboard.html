@@ -1,5 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>From Dashboar</h1>
+    <div class="container-fluid">
+       <div class="row">
+        <div class="col-md-3">
+            <ul>
+                <li>
+                    <a href="{% url 'account:view_teacher' %}"> Manage Teacher </a>
+                </li>
+                <li>Manage Student</li>
+                <li>Manage Subject/Class</li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            {% block link_data %}
+            {% endblock %}
+        </div>
+       </div>
+    
+    </div>
 
 {% endblock %}
