@@ -1,1 +1,10 @@
 <h1>Teacher Dashboard</h1>
+<h2>
+    <a href="{% url 'account:logout_custom_user' %}">Logout</a>
+</h2>
+<h2>
+    Id: {{staff.id}}
+    Name: {{staff.username}}
+    First Name: {{staff.first_name}}
+    Role : {{staff.role}}
+</h2>

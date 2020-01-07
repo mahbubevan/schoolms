@@ -50,6 +50,7 @@ def login(request):
             if Staff.objects.filter(teacher_id=username).exists():
                 s_user = Staff.objects.get(teacher_id=username)
                 if check_password(password,s_user.password):
+                    request.session['staff_id'] = s_user.id
                     return redirect('staff:dashboard')
                 return redirect('account:login')
             return redirect('account:login')
@@ -98,3 +99,10 @@ def create_teacher(request):
 
         return redirect('account:view_teacher')
     
+def logout_custom_user(request):
+    try:
+        del request.session['staff_id']
+    except KeyError:
+        pass
+
+    return redirect('account:login')
